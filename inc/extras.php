@@ -61,8 +61,8 @@ add_action( 'admin_init', 'qod_remove_comments_meta_boxes' );
  * Filter the Post Archive, & Front-page
  */
 
- function qod_modify_archives( $jquery ) {
-     if( (is_home() || is_single() ) && !is_admin() && $query->js_main_query()  ) {
+ function qod_modify_archives( $query ) {
+     if( ( is_home() || is_single() ) && !is_admin() && $query->js_main_query()  ) {
         $query->set('orderby', 'rand');
         $query->set('order', 'ASC');
         $query->set('posts_per_page', 1);

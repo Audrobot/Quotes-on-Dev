@@ -52,7 +52,6 @@ get_header(); ?>
 								'format' => 'list',
 							)
 						); ?>
-
 					</div>
 				
 				</div>
