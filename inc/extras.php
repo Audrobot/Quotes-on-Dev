@@ -62,7 +62,7 @@ add_action( 'admin_init', 'qod_remove_comments_meta_boxes' );
  */
 
  function qod_modify_archives( $query ) {
-     if( ( is_home() || is_single() ) && !is_admin() && $query->js_main_query()  ) {
+     if( ( is_home() || is_single() ) && !is_admin() && $query->is_main_query()  ) {
         $query->set('orderby', 'rand');
         $query->set('order', 'ASC');
         $query->set('posts_per_page', 1);
