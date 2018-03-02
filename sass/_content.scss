@@ -31,3 +31,29 @@
 	clear: both;
 	margin: 0 0 $base__space-unit;
 }
+
+
+.site-content {
+	&::before {
+			@include desktop {
+					content: '\f10d';
+					font-family: FontAwesome;
+					position: absolute;
+					left: 130px;
+					color: $color__text-main;
+					font-size: 140px;
+					top: 240px;
+			}
+	}
+	&::after {
+			@include desktop {
+					content: '\f10e';
+					font-family: FontAwesome;
+					position: absolute;
+					right: 130px;
+					color: $color__text-main;
+					font-size: 140px;
+					top: 240px;
+			}
+	}
+}
