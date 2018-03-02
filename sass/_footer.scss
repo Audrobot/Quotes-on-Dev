@@ -1,19 +1,21 @@
 .site-info {
   margin-bottom: 60px;
+  
   @include tablet {
     display: flex;
     justify-content: flex-start;
   }
+  
   @include desktop {
     justify-content: flex-end;
     width: 1080px;
     margin-left: auto;
     margin-right: auto;
   }
+  
   p {
     padding-left: 10px;
-    margin: 0;
-    
+    margin: 0;  
   }
 }
 
@@ -29,6 +31,7 @@
   }
   
   li {
+    
     a {
       padding: 0 10px;
     }
