@@ -1,0 +1,42 @@
+.site-info {
+  margin-bottom: 60px;
+  @include tablet {
+    display: flex;
+    justify-content: flex-start;
+  }
+  @include desktop {
+    justify-content: flex-end;
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  p {
+    padding-left: 10px;
+    margin: 0;
+    
+  }
+}
+
+.footer_navigation ul {
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 15px;
+
+  @include desktop {
+    justify-content: flex-end;
+  }
+  
+  li {
+    a {
+      padding: 0 10px;
+    }
+    
+    list-style-type: none;
+    &::after {
+      content: '|';
+    }
+  }
+}
+
