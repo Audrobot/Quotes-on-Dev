@@ -4,4 +4,107 @@
 
 /* All Archives Page */
 
+.post-archives {
+  
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    
+    li {
+      padding-right: 15px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      font-size: 1.2em;
+    }
+  }
+
+  h2 {
+    color: white;
+  }
+}
+
+.archive {
+
+  .entry-content {
+    margin: 0;
+  }
+  
+  .page-header {
+    margin-top: 35px;
+    border-bottom: $color__border;
+  }
+  
+  article {
+    border-bottom: $color__border;
+    margin: 0;
+    padding-bottom: 2rem;
+  }
+  
+  .number-pagination {
+    margin-top: 2em;
+  }
+}
+
+
 /* Submit a Quote Page */
+
+#quote-submission-form {
+  
+  div {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 13px;
+    
+    label {
+      padding: 10px 0;
+    }
+    
+    textarea {
+      background-color: $color__background-body;
+      border: 2px solid $color__brand-green;
+      border-radius: 3px;
+      color: white;
+      
+      &:focus {
+        outline: 0;
+        border-color: white;
+      }
+    }
+  }
+
+    input{
+      width: 250px;
+      background-color: $color__background-body;
+      border: 2px solid $color__brand-green;
+      border-radius: 3px;
+      color: white;
+      
+      &:focus {
+        outline: 0;
+        border-color: white;
+      }
+      
+      @include tablet {
+        width: 450px;
+      }
+    }
+   
+  input[type="submit"] {
+    font-size: 20px;
+    padding: 10px 25px;
+    border: 2px solid $color__brand-green;
+    box-shadow: none;
+    text-shadow: none;
+    color: $color__brand-green;
+    background-color: $color__background-body;
+    
+    &:hover {
+      color: darken($color__brand-green, 20%);
+      border-color: darken($color__brand-green, 20%);
+    }
+  }
+}
+
