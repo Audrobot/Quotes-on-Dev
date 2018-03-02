@@ -10,7 +10,8 @@
 
 .hentry {
 	margin: 0 0 $base__space-unit;
-}
+
+ }
 
 .updated:not(.published){
 	display: none;
@@ -40,7 +41,7 @@
 					font-family: FontAwesome;
 					position: absolute;
 					left: 130px;
-					color: $color__text-main;
+					color: $color__brand-green;
 					font-size: 140px;
 					top: 240px;
 			}
@@ -51,9 +52,83 @@
 					font-family: FontAwesome;
 					position: absolute;
 					right: 130px;
-					color: $color__text-main;
+					color: $color__brand-green;
 					font-size: 140px;
 					top: 240px;
 			}
 	}
 }
+
+.site {
+	width: auto;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.content-area{
+	width: 650px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+#new-quote-button {
+	border: 2px solid $color__brand-green;
+	border-radius: 4px;
+	box-shadow: none;
+	text-shadow: none;
+	background: transparent;
+	color: $color__brand-green;
+	font-size: 18px;
+	margin-top: 15px;
+	padding: 15px 15px;
+	
+	&:hover {
+		background: transparent;
+		box-shadow: none;
+		text-shadow: none;	
+	
+	}
+	@include tablet {
+		font-size: 1.3em;
+	}
+	@include desktop {
+		margin: auto
+	}
+}
+
+main {
+	margin-bottom: 80px;
+	@include desktop {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		margin-bottom: 40px;
+	}
+}
+
+.type-post {
+	width: 650px;
+	display: flex;
+	justify-content: left;
+	flex-direction: column;
+
+	p {
+		font-size: 40px;
+		font-weight: 300;
+		margin-top: 25px;
+	}
+}
+
+.site-info {
+		display: flex;
+		justify-content: flex-end;
+    width: 1080px;
+    margin-left: auto;
+    margin-right: auto;
+	}
+	
+
