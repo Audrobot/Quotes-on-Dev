@@ -38,7 +38,7 @@
   })
 
   $(window).on('popstate', function() {
-    console.log("popstate active!");
+
     if (window.location.hash.indexOf('qm-overview') === 1) {
       return false;
     }else {
