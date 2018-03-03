@@ -4,7 +4,6 @@
  *
  * @package QOD_Starter_Theme
  */
-
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -18,6 +17,7 @@
 			wp_link_pages( array(
 				'before' => '<div class="page-links">' . esc_html( 'Pages:' ),
 				'after'  => '</div>',
+				'next_or_number'   => 'number',
 			) );
 		?>
 	</div><!-- .entry-content -->
