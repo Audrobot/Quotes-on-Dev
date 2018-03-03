@@ -75,9 +75,7 @@
        
       }).done( function() {
         $('#submit-quote').after( '<p>' + api_vars.success + '</p>' );
-        $('#submit-quote').trigger("reset");
         
-      
       }).always(function() {
         $('#quote-submission-form').trigger('reset');
       
