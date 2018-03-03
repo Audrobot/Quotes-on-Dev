@@ -4,9 +4,7 @@
  *
  * @package QOD_Starter_Theme
  */
-
 ?>
-
 			</div><!-- #content -->
 
 			<footer id="colophon" class="site-footer" role="contentinfo">
@@ -24,7 +22,6 @@
 
 					<p>Brought to you by <a href="https://github.com/Audrobot">
 					Audra Kornicki</a> © <?php echo date('Y'); ?></p>
-
 
 				</div><!-- .site-info -->
 			</footer><!-- #colophon -->
