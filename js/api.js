@@ -30,7 +30,7 @@
         }
 
         history.pushState(null, null, post.link);
-
+        console.log(post.link);
       }
     
     })
@@ -46,6 +46,38 @@
     }
   
   });
+
+
+//**  SUBMIT BUTTON **/
+
+  $('#quote-submission-form').on('click', function(event) {
+    event.preventDefault();
+
+    var name = $('#quote-author').val();
+    var contentForm = $('#quote-content').val();
+    var sourceForm = $('#quote-source').val();
+    var sourceUrl = $('#quote-source-url').val();
+
+  $.ajax({
+    method: 'post',
+    url: api_vars.root_url + 'wp/v2/posts/',
+    data: {
+        title: name,
+        content: contentForm,
+        _qod_quote_source: sourceForm,
+        _qod_quote_source_url: sourceUrl
+
+    },
+    beforeSend: function(xhr) {
+        xhr.setRequestHeader( 'X-WP-Nonce', api_vars.nonce );
+    }
+  }).done( function(response) {
+    alert('Success! Your comment has been successfully posted.');
+    console.log(response);
+  });
+
+});
+
 
 })(jQuery);
 
