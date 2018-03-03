@@ -50,7 +50,7 @@
 
 //**  SUBMIT BUTTON **/
 
-  $('#quote-submission-form').on('click', function(event) {
+  $('#submit-quote').on('click', function(event) {
     event.preventDefault();
 
     var name = $('#quote-author').val();
@@ -58,28 +58,37 @@
     var sourceForm = $('#quote-source').val();
     var sourceUrl = $('#quote-source-url').val();
 
-  $.ajax({
-    method: 'post',
-    url: api_vars.root_url + 'wp/v2/posts/',
-    data: {
-        title: name,
-        content: contentForm,
-        _qod_quote_source: sourceForm,
-        _qod_quote_source_url: sourceUrl
+      $.ajax({
+        method: 'post',
+        url: api_vars.root_url + 'wp/v2/posts/',
+        data: {
+            title: name,
+            content: contentForm,
+            _qod_quote_source: sourceForm,
+            _qod_quote_source_url: sourceUrl,
+            status: "publish"
+        },
+        
+        beforeSend: function(xhr) {
+          xhr.setRequestHeader( 'X-WP-Nonce', api_vars.nonce );
+        }
+       
+      }).done( function() {
+        $('#submit-quote').after( '<p>' + api_vars.success + '</p>' );
+        $('#submit-quote').trigger("reset");
+        
+      
+      }).always(function() {
+        $('#quote-submission-form').trigger('reset');
+      
+      }).fail(function() {
+        $('#submit-quote').after( '<p>' + api_vars.failure + '</p>' );
+        
+      })
 
-    },
-    beforeSend: function(xhr) {
-        xhr.setRequestHeader( 'X-WP-Nonce', api_vars.nonce );
-    }
-  }).done( function(response) {
-    alert('Success! Your comment has been successfully posted.');
-    console.log(response);
-  });
-
-});
-
-
-})(jQuery);
+    });
+  
+  })(jQuery);
 
 
 
