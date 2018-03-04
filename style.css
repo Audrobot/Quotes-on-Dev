@@ -822,7 +822,8 @@ object {
       margin-right: auto; } }
   .site-info p {
     padding-left: 10px;
-    margin: 0; }
+    margin: 0;
+    margin-top: 25px; }
 
 .footer_navigation ul {
   display: -webkit-box;
@@ -834,6 +835,7 @@ object {
           flex-direction: row;
   padding: 0;
   margin: 0;
+  margin-top: 25px;
   margin-bottom: 15px; }
   @media (min-width: 1080px) {
     .footer_navigation ul {
@@ -843,6 +845,7 @@ object {
   .footer_navigation ul li {
     list-style-type: none; }
     .footer_navigation ul li a {
+      margin-top: 15px;
       padding: 0 10px; }
     .footer_navigation ul li::after {
       content: '|'; }
