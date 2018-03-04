@@ -26,21 +26,18 @@
 						
 						<h1 class="site-title screen-reader-text">
 							
-							<a href="<?php esc_url( home_url( '/' ) ); ?>">
-								<?php bloginfo( 'name' ); ?>
-							</a>
+							<a href="<?php esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
 						
 						</h1>	
 						
 						<a href="<?php esc_url( home_url( '/' ) ); ?>">
-								<img src="<?php echo get_template_directory_uri() .
-								'/assets/images/qod-logo.svg'; ?>" class="logo" alt="Quotes on dev logo">
+							<img src="<?php echo get_template_directory_uri() .'/assets/images/qod-logo.svg'; ?>" class="logo" alt="Quotes on dev logo">
 						</a>	
 						
 					</div>
 					
-					
 				</div><!-- .site-branding -->
+			
 			</header><!-- #masthead -->
 
 			<div id="content" class="site-content">
