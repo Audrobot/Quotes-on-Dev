@@ -74,7 +74,8 @@
         }
        
       }).done( function() {
-        $('#submit-quote').after( '<p>' + api_vars.success + '</p>' );
+        $('#quote-submission-form').hide();
+        $('.submit-success-message').after( '<p>' + api_vars.success + '</p>' );
         
       }).always(function() {
         $('#quote-submission-form').trigger('reset');
