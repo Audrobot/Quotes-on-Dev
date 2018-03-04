@@ -611,10 +611,10 @@ a {
     content: '\f10d';
     font-family: FontAwesome;
     position: absolute;
-    left: 115px;
+    left: 130px;
     color: #00cc00;
-    font-size: 140px;
-    top: 220px; } }
+    font-size: 125px;
+    top: 230px; } }
 
 @media (min-width: 1080px) {
   .site-content::after {
@@ -623,8 +623,8 @@ a {
     position: absolute;
     right: 130px;
     color: #00cc00;
-    font-size: 140px;
-    top: 220px; } }
+    font-size: 125px;
+    top: 230px; } }
 
 .site {
   width: auto;
@@ -713,6 +713,9 @@ main {
   width: 1080px;
   margin-left: auto;
   margin-right: auto; }
+
+.entry-meta h2 {
+  font-weight: 300; }
 
 /*--------------------------------------------------------------
 # Media
@@ -817,7 +820,9 @@ object {
 
 .site-info {
   width: 300px;
-  margin-bottom: 0;
+  margin-bottom: 60px;
+  margin-left: 0;
+  margin-right: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -830,6 +835,8 @@ object {
     .site-info {
       width: 620px;
       margin-bottom: 60px;
+      margin-left: auto;
+      margin-right: auto;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -862,6 +869,9 @@ object {
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   padding: 0;
   margin: 0; }
   @media (min-width: 1080px) {
@@ -883,4 +893,4 @@ object {
   margin-top: 15px;
   text-align: center; }
   .logo img {
-    width: 650px; }
+    width: 700px; }

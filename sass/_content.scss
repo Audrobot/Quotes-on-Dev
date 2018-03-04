@@ -40,10 +40,10 @@
 					content: '\f10d';
 					font-family: FontAwesome;
 					position: absolute;
-					left: 115px;
+					left: 130px;
 					color: $color__brand-green;
-					font-size: 140px;
-					top: 220px;
+					font-size: 125px;
+					top: 230px;
 			}
 	}
 	&::after {
@@ -53,8 +53,8 @@
 					position: absolute;
 					right: 130px;
 					color: $color__brand-green;
-					font-size: 140px;
-					top: 220px;
+					font-size: 125px;
+					top: 230px;
 			}
 	}
 }
@@ -138,4 +138,8 @@ main {
     margin-right: auto;
 	}
 	
-
+.entry-meta {
+	h2 {
+		font-weight: 300;
+	}
+}
