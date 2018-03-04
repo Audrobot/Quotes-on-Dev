@@ -11,7 +11,7 @@ Displayed on the Home page is a quote and button that on click generates another
 
 [VScode](http://www.vscode.com) - Text Editor
 
-### ...and
+...and
 
 * PHP
 * Wordpress
