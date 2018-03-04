@@ -62,7 +62,18 @@ textarea {
 }
 
 #quote-submission-form {
- 	#submit-quote {
+	 
+	#submit-quote {
 		width: 225px;
 	}	
+	
+	#quote-author, #quote-content, 
+	#quote-source, #quote-source-url {
+		&:focus {
+			color: #111;
+			background-color: #FFFFCC;
+			border: 2px solid $color__brand-green;
+		}
+	} 
+
 }

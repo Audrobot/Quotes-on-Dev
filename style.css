@@ -434,6 +434,12 @@ textarea {
 #quote-submission-form #submit-quote {
   width: 225px; }
 
+#quote-submission-form #quote-author:focus, #quote-submission-form #quote-content:focus,
+#quote-submission-form #quote-source:focus, #quote-submission-form #quote-source-url:focus {
+  color: #111;
+  background-color: #FFFFCC;
+  border: 2px solid #00cc00; }
+
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
