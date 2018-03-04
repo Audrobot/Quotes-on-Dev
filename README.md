@@ -1,23 +1,34 @@
-# Quotes on Dev Starter
+# Quotes on Dev 
 
-A WordPress starter theme for the Quotes on Dev project, forked from Underscores.
+A WordPress theme replicated after 'Quotes on Dev'- a site inspired by Chris Coyier's "Quotes on Design". Quotes on Dev uses a custom Rest Api to randomly fetch and return posts when the 'Show me another' button is clicked.
 
-## Installation
+## Instructions
 
-### 1. Download me (don't clone me!)
+Displayed on the Home page is a quote and button that on click generates another random quote. Pressing this button triggers an ajax request to the rest api, displaying a new random quote from the stored quotes contained in the blog posts section of the site. There is also an About page, Archives page--containing categories and tags--and Submit page. If user is logged in, a new quote can be submitted via an ajax post request.
+  
 
-Then add me to your `wp-content/themes` directory.
+## Built With
 
-### 2. Rename the `quotesondev-starter-master` directory
+[VScode](http://www.vscode.com) - Text Editor
 
-Make sure that the theme directory name is project appropriate! Do you need `starter` or `master` in the directory name?
+###...and
 
-### 3. Install the dev dependencies
+* PHP
+* Wordpress
+* Html 5
+* CSS
+* SCSS
+* JavaScript
+* jQuery
+* Gulp
+* Eslint
 
-Next you'll need to run `npm install` **inside your theme directory** to install the npm packages you'll need for Gulp, etc.
 
-### 4. Update the proxy in `gulpfile.js`
+## Author
 
-Lastly, be sure to update your `gulpfile.js` with the appropriate URL for the Browsersync proxy (so change `localhost[:port-here]/[your-dir-name-here]` to the appropriate localhost URL).
+Audra Kornicki - [Audrobot](https://github.com/Audrobot)
 
-And now would be a good time to `git init` :)
+
+## Acknowledgments
+
+Many thanks to Jim Bennett, Rose Cass, & RED Academy for all the guidance, patience, and support.
