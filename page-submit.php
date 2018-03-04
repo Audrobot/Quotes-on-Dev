@@ -41,7 +41,7 @@ get_header(); ?>
 							<input type="submit" value="Submit Quote" id="submit-quote">
 					</form>
 						
-					<p class="submit-success-message"></p>
+					<p class="submit-success-message" style="display: "block"></p>
 						
 					<?php else: ?>
 						<p>Sorry, you must be logged in to submit a quote.</p>
