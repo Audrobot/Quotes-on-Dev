@@ -634,7 +634,6 @@ a {
   padding-right: 10px; }
 
 .content-area {
-  width: 650px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
@@ -642,23 +641,25 @@ a {
 
 #new-quote-button {
   border: 2px solid #00cc00;
-  border-radius: 4px;
+  border-radius: 2px;
   -webkit-box-shadow: none;
           box-shadow: none;
   text-shadow: none;
   background: transparent;
   color: #00cc00;
   font-size: 18px;
-  margin-top: 15px;
-  padding: 15px 15px; }
+  margin-top: 10px;
+  padding: 10px 25px; }
   #new-quote-button:hover {
-    background: transparent;
+    color: #006600;
+    border-color: #006600;
+    background: transparent; }
+  #new-quote-button:focus {
     -webkit-box-shadow: none;
-            box-shadow: none;
-    text-shadow: none; }
+            box-shadow: none; }
   @media (min-width: 620px) {
     #new-quote-button {
-      font-size: 1.3em; } }
+      font-size: 20px; } }
   @media (min-width: 1080px) {
     #new-quote-button {
       margin: auto; } }
@@ -674,34 +675,36 @@ main {
       -webkit-box-direction: normal;
           -ms-flex-direction: column;
               flex-direction: column;
-      -webkit-box-pack: center;
-          -ms-flex-pack: center;
-              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
       margin-bottom: 40px; } }
 
-.type-post {
-  width: 340px; }
+@media (min-width: 620px) {
+  .type-post {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; } }
+
+@media (min-width: 1080px) {
+  .type-post {
+    width: 550px; } }
+
+.type-post p {
+  font-size: 20px;
+  font-weight: 300; }
   @media (min-width: 620px) {
-    .type-post {
-      width: 650px;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: left;
-          -ms-flex-pack: left;
-              justify-content: left;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column; } }
-  .type-post p {
-    font-size: 20px;
-    font-weight: 300; }
-    @media (min-width: 620px) {
-      .type-post p {
-        font-size: 40px;
-        font-weight: 300;
-        margin-top: 25px; } }
+    .type-post p {
+      font-size: 40px;
+      font-weight: 300; } }
 
 .site-info {
   display: -webkit-box;
@@ -710,12 +713,19 @@ main {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  width: 1080px;
+  width: 1060px;
   margin-left: auto;
   margin-right: auto; }
 
 .entry-meta h2 {
   font-weight: 300; }
+
+.entry-meta .source {
+  color: #222222; }
+
+@media (min-width: 1080px) {
+  .type-page {
+    width: 520px; } }
 
 /*--------------------------------------------------------------
 # Media
@@ -739,6 +749,9 @@ object {
 --------------------------------------------------------------*/
 /* All Archives Page */
 .post-archives ul {
+  font-size: 20px;
+  font-weight: 300;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -751,7 +764,7 @@ object {
     padding-right: 15px;
     padding-top: 5px;
     padding-bottom: 5px;
-    font-size: 1.2em; }
+    font-size: 20px; }
 
 .post-archives h2 {
   color: white; }
@@ -762,14 +775,29 @@ object {
 .archive .page-header {
   margin-top: 35px;
   border-bottom: 1px dashed #ffffff; }
+  @media (min-width: 1080px) {
+    .archive .page-header {
+      width: 50%; } }
+
+.archive .nav-previous {
+  width: 100%; }
 
 .archive article {
   border-bottom: 1px dashed #ffffff;
   margin: 0;
-  padding-bottom: 2rem; }
+  padding-bottom: 25px; }
 
 .archive .number-pagination {
-  margin-top: 2em; }
+  margin-top: 15px; }
+
+@media (min-width: 620px) {
+  .browse-archives {
+    width: 600px; } }
+
+@media (min-width: 1080px) {
+  .browse-archives {
+    width: 560px;
+    margin-left: 45px; } }
 
 /* Submit a Quote Page */
 #quote-submission-form div {
@@ -792,18 +820,21 @@ object {
       outline: 0;
       border-color: white; }
 
-#quote-submission-form input {
+#quote-submission-form input, #quote-submission-form textarea {
   width: 250px;
   background-color: #222222;
   border: 2px solid #00cc00;
   border-radius: 3px;
   color: white; }
-  #quote-submission-form input:focus {
+  #quote-submission-form input:focus, #quote-submission-form textarea:focus {
     outline: 0;
     border-color: white; }
   @media (min-width: 620px) {
-    #quote-submission-form input {
-      width: 450px; } }
+    #quote-submission-form input, #quote-submission-form textarea {
+      width: 350px; } }
+  @media (min-width: 1080px) {
+    #quote-submission-form input, #quote-submission-form textarea {
+      width: 500px; } }
 
 #quote-submission-form input[type="submit"] {
   font-size: 20px;
@@ -817,6 +848,12 @@ object {
   #quote-submission-form input[type="submit"]:hover {
     color: #006600;
     border-color: #006600; }
+  #quote-submission-form input[type="submit"]:focus {
+    -webkit-box-shadow: none;
+            box-shadow: none; }
+
+.quote-submission-wrapper h1 {
+  margin-top: 80px; }
 
 .site-info {
   width: 300px;
@@ -848,7 +885,7 @@ object {
       -webkit-box-pack: end;
           -ms-flex-pack: end;
               justify-content: flex-end;
-      width: 1080px;
+      width: 1060px;
       margin-bottom: 60px;
       margin-left: auto;
       margin-right: auto; } }
@@ -890,7 +927,22 @@ object {
       content: '|'; }
 
 .logo {
-  margin-top: 15px;
-  text-align: center; }
+  margin-top: 15px; }
+  .logo .logo-link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
   .logo img {
-    width: 700px; }
+    width: 300px; }
+    @media (min-width: 620px) {
+      .logo img {
+        width: 500px; } }
+    @media (min-width: 1080px) {
+      .logo img {
+        width: 700px;
+        -ms-flex-item-align: center;
+            align-self: center; } }

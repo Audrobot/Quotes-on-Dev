@@ -36,26 +36,26 @@
 
 .site-content {
 	&::before {
-			@include desktop {
-					content: '\f10d';
-					font-family: FontAwesome;
-					position: absolute;
-					left: 130px;
-					color: $color__brand-green;
-					font-size: 125px;
-					top: 230px;
-			}
+		@include desktop {
+			content: '\f10d';
+			font-family: FontAwesome;
+			position: absolute;
+			left: 130px;
+			color: $color__brand-green;
+			font-size: 125px;
+			top: 230px;
+		}
 	}
 	&::after {
-			@include desktop {
-					content: '\f10e';
-					font-family: FontAwesome;
-					position: absolute;
-					right: 130px;
-					color: $color__brand-green;
-					font-size: 125px;
-					top: 230px;
-			}
+		@include desktop {
+			content: '\f10e';
+			font-family: FontAwesome;
+			position: absolute;
+			right: 130px;
+			color: $color__brand-green;
+			font-size: 125px;
+			top: 230px;
+		}
 	}
 }
 
@@ -68,7 +68,6 @@
 }
 
 .content-area{
-	width: 650px;
 	margin-left: auto;
 	margin-right: auto;
 	padding-left: 15px;
@@ -77,69 +76,89 @@
 
 #new-quote-button {
 	border: 2px solid $color__brand-green;
-	border-radius: 4px;
+	border-radius: 2px;
 	box-shadow: none;
 	text-shadow: none;
 	background: transparent;
 	color: $color__brand-green;
 	font-size: 18px;
-	margin-top: 15px;
-	padding: 15px 15px;
+	margin-top: 10px;
+	padding: 10px 25px;
 	
 	&:hover {
+		color: darken($color__brand-green, 20%);
+    border-color: darken($color__brand-green, 20%);
 		background: transparent;
+	}
+
+	&:focus {
 		box-shadow: none;
-		text-shadow: none;	
-	
 	}
+
 	@include tablet {
-		font-size: 1.3em;
+		font-size: 20px;
 	}
+	
 	@include desktop {
-		margin: auto
+		margin: auto;
 	}
 }
 
 main {
 	margin-bottom: 80px;
+	
 	@include desktop {
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
+		align-items: center;
 		margin-bottom: 40px;
 	}
 }
 
 .type-post {
-	width: 340px;
+
 	@include tablet {
-	width: 650px;
-	display: flex;
-	justify-content: left;
-	flex-direction: column;
+		width: 100%;
+		display: flex;
+		justify-content: left;
+		flex-direction: column;
+	}
+
+	@include desktop {
+		width: 550px;
 	}
 
 	p {
 		font-size: 20px;
-		font-weight: 300;	
-		@include tablet {
-		font-size: 40px;
 		font-weight: 300;
-		margin-top: 25px;
+
+		@include tablet {
+			font-size: 40px;
+			font-weight: 300;
 		}
 	}
 }
 
 .site-info {
-		display: flex;
-		justify-content: flex-end;
-    width: 1080px;
-    margin-left: auto;
-    margin-right: auto;
-	}
+	display: flex;
+	justify-content: flex-end;
+	width: 1060px;
+	margin-left: auto;
+	margin-right: auto;
+}
 	
 .entry-meta {
 	h2 {
 		font-weight: 300;
+	}
+
+	.source  {
+		color: #222222;
+	}
+}
+
+.type-page {
+	@include desktop {
+		width: 520px;
 	}
 }
