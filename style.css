@@ -885,7 +885,7 @@ object {
       -webkit-box-pack: end;
           -ms-flex-pack: end;
               justify-content: flex-end;
-      width: 1060px;
+      width: 1020px;
       margin-bottom: 60px;
       margin-left: auto;
       margin-right: auto; } }
@@ -927,7 +927,11 @@ object {
       content: '|'; }
 
 .logo {
-  margin-top: 15px; }
+  margin-top: 15px;
+  text-align: left; }
+  @media (min-width: 1080px) {
+    .logo {
+      text-align: center; } }
   .logo .logo-link {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -943,6 +947,7 @@ object {
         width: 500px; } }
     @media (min-width: 1080px) {
       .logo img {
-        width: 700px;
-        -ms-flex-item-align: center;
-            align-self: center; } }
+        width: 700px; } }
+
+.page-header .page-title {
+  font-size: 2em; }

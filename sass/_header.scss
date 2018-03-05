@@ -1,5 +1,10 @@
 .logo {
   margin-top: 15px;
+  text-align: left;
+
+  @include desktop {
+    text-align: center;
+  }
 
   .logo-link {
     display: flex;
@@ -15,7 +20,12 @@
 
     @include desktop {
       width: 700px;
-      align-self: center;
     }
+  }
+}
+
+.page-header {
+  .page-title {
+    font-size: 2em;
   }
 }
