@@ -1,7 +1,21 @@
 .logo {
   margin-top: 15px;
-  text-align: center;
+
+  .logo-link {
+    display: flex;
+    flex-direction: column;
+  }
+
   img {
-    width: 700px;
+    width: 300px;
+
+    @include tablet {
+      width: 500px;
+    }
+
+    @include desktop {
+      width: 700px;
+      align-self: center;
+    }
   }
 }
