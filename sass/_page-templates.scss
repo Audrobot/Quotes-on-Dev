@@ -5,20 +5,34 @@
 /* All Archives Page */
 
 .post-archives {
+  // width: 350px;
   
   ul {
+    font-size: 20px;
+    font-weight: 300;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     list-style-type: none;
     margin: 0;
     padding: 0;
+
+    @include tablet {
+      
+    }
+
+    @include desktop {
+    
+    }
     
     li {
       padding-right: 15px;
       padding-top: 5px;
       padding-bottom: 5px;
-      font-size: 1.2em;
+      font-size: 20px;
     }
+
+   
   }
 
   h2 {
@@ -35,17 +49,39 @@
   .page-header {
     margin-top: 35px;
     border-bottom: $color__border;
+
+    @include desktop {
+      width: 50%;
+    }
+  }
+
+  .nav-previous {
+    width: 100%;
   }
   
   article {
     border-bottom: $color__border;
     margin: 0;
-    padding-bottom: 2rem;
+    padding-bottom: 25px;
   }
   
   .number-pagination {
-    margin-top: 2em;
+    margin-top: 15px;
   }
+}
+
+.browse-archives {
+  // width: 250px;
+  
+  @include tablet  {
+    width: 600px;
+  }
+
+  @include desktop {
+    width: 560px;
+    margin-left: 45px;
+  }
+
 }
 
 
@@ -75,22 +111,26 @@
     }
   }
 
-    input{
-      width: 250px;
-      background-color: $color__background-body;
-      border: 2px solid $color__brand-green;
-      border-radius: 3px;
-      color: white;
-      
-      &:focus {
-        outline: 0;
-        border-color: white;
-      }
-      
-      @include tablet {
-        width: 450px;
-      }
+  input, textarea {
+    width: 250px;
+    background-color: $color__background-body;
+    border: 2px solid $color__brand-green;
+    border-radius: 3px;
+    color: white;
+    
+    &:focus {
+      outline: 0;
+      border-color: white;
     }
+    
+    @include tablet {
+      width: 350px;
+    }
+
+    @include desktop {
+      width: 500px;
+    }
+  }
    
   input[type="submit"] {
     font-size: 20px;
@@ -105,6 +145,15 @@
       color: darken($color__brand-green, 20%);
       border-color: darken($color__brand-green, 20%);
     }
+
+    &:focus {
+      box-shadow: none;
+    }
   }
 }
 
+.quote-submission-wrapper {
+  h1 {
+    margin-top: 80px;
+  }
+}
